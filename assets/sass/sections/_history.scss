@@ -1,0 +1,54 @@
+@use "../abstracts/" as *;
+
+.history-card{
+     position: relative;
+     padding: 70px 40px 40px;
+     &:hover{
+          .arrow{
+               opacity: 1;
+               transform: translateX(0px);
+
+          }
+     }
+     &.style-pink{
+          background: #E8C9FC;
+     }
+     &.style-green{
+          background: $color-light-green;
+     }
+     &.style-blue{
+          background: $color-sky-blue;
+     }
+
+     .arrow{
+          position: absolute;
+          right: 20px;
+          top: 16px;
+          opacity: 0;
+          transition: 0.5s ease;
+          transform: translateX(-10px);
+     }
+     .content{
+          p{
+               font-size: 16px;
+               color: $text-secondary;
+               margin-bottom: 5px;
+               line-height: 1;
+          }
+          h4{
+               font-size: 30px;
+               margin-bottom: 10px;
+          }
+
+          span{
+               display: inline-block;
+               font-size: 15px;
+               padding: 4px 12px;
+               background-color: $color-white;
+               color: #004EC3;
+               border-radius: $radius-16;
+               font-weight: 500;
+               line-height: 1.2;
+          }
+     }
+}

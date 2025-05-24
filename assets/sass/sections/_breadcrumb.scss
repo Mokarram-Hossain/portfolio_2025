@@ -1,0 +1,54 @@
+@use "../abstracts/" as *;
+
+.inner-page-title {
+     color: $text-primary;
+     font-size: 60px;
+     font-weight: 600;
+    //  font-weight: 500;
+     line-height: 1.15;
+   
+     @include md-down {
+       font-size: 32px;
+     }
+     @include md{
+       font-size: 36px;
+     }
+     @include lg {
+       font-size: 38px;
+     }
+   }
+
+   .page-subtitle{
+     font-size: 18px;
+     span{
+          display: inline-block;
+          font-weight: 500;
+     }
+   }
+
+   .breadcrumb {
+          display: inline-flex;
+          justify-content: center;
+          margin-bottom: 25px;
+          border: 1px solid $border-primary;
+          padding: 5px 18px;
+          border-radius: 30px;
+          gap: 8px;
+
+     .breadcrumb-item {
+       color: $text-secondary;
+       font-size: 16px;
+       font-weight: 500;
+       padding-left: 0;
+       a {
+         color: $text-primary;
+       }
+     }
+   }
+   
+   .breadcrumb-item + .breadcrumb-item::before {
+     float: left;
+     padding-right: var(--bs-breadcrumb-item-padding-x);
+     color: $text-primary;
+     content: var(--bs-breadcrumb-divider, "/");
+   }

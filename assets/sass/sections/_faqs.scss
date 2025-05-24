@@ -1,0 +1,35 @@
+@use "../abstracts/" as *;
+
+.faqs {
+  background: #f8f8f8;
+  height: min-content;
+}
+
+.faq-card{
+  border-radius: $radius-12;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+
+  .icon{
+    min-width: 55px;
+    height: 55px;
+    line-height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $color-primary;
+    background-color: $color-primary;
+    i{
+      color: $color-white;
+      font-size: 26px;
+    }
+  }
+  h5{
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+}

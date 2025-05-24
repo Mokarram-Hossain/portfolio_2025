@@ -1,0 +1,66 @@
+@use "../abstracts/" as *;
+
+.about-card{
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     padding: 20px;
+     border-radius: 20px;
+     gap: 40px;
+     flex-wrap: wrap;
+
+     .image{
+          width: 100%;
+          max-width: 340px;
+     }
+
+     .content{
+          ul{
+               margin-bottom: 70px;
+               li{
+                    font-size: 22px;
+                    margin-bottom: 10px;
+
+                    &:last-child{
+                         margin-bottom: 0px; 
+                    }
+               }
+          }
+          h4{
+               font-size: 32px;
+               font-weight: 400;
+               margin-bottom: 20px;
+
+                 @include lg-down{
+                         font-size: 20px;
+                    }
+          }
+
+     }
+}
+
+.email{
+     background-color: $color-dark;
+     color: $color-white;
+     text-align: center;
+     padding: 8px 28px;
+     border-radius: 30px;
+     display: inline-block;
+     a{
+          color: $color-white;
+          font-size: 22px;
+          font-weight: 500;
+
+            @include lg-down{
+               font-size: 16px;
+               font-weight: 400;
+          }
+     }
+
+     &.style-two{
+          background-color: $color-primary;
+          a{
+               color: $text-primary;
+          }
+     }
+}

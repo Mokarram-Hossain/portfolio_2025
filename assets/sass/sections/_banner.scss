@@ -1,0 +1,539 @@
+@use "../abstracts/" as *;
+
+.banner-title {
+  font-size: 60px;
+  margin-block-end: 50px;
+  font-weight: 500;
+  line-height: 1.12;
+  color: $color-white;
+  @include xl-down {
+    font-size: 44px;
+  }
+  @include sm-down {
+    font-size: 34px;
+  }
+
+  span{
+    font-family: $font-secondary;
+  }
+}
+
+.banner {
+  padding-block-start: 155px;
+  padding-block-end: 90px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  height: min-content;
+  padding-left: 3%;
+  padding-right: 3%;
+  overflow: hidden;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+
+  @include md-down{
+    padding-top: 100px;
+    padding-block-end: 40px;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  .banner-image{
+    position: absolute;
+    right: 0;
+    top: 0;
+    max-width: 610px;
+    height: 100%;
+
+    img{
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .banner-content {
+    position: relative;
+    margin-bottom: 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+
+    @include xl(){
+    padding: 35px;
+    }
+
+    @include lg{
+      padding: 30px;  
+    }
+    @include md{
+      padding: 25px;
+    }
+
+    @include md-down{
+      padding: 20px;
+    }
+
+    .recta-text{
+      position: absolute;
+      right: 100px;
+      top: 20px;
+      z-index: -1;
+      animation: zoom 1s infinite alternate;
+
+      @include md-down{
+        right: 20px;
+        top: 0px;
+      }
+      svg{
+        fill: $color-primary;
+        width: 100px;
+        opacity: 1;
+        opacity: 0.6;
+
+        @include xxl{
+          width: 80px;
+        }
+        @include xl{
+          width: 70px;
+        }
+        @include lg{
+          width: 60px;
+        }
+        @include md{
+          width: 55px;
+        }
+
+        @include md-down{
+          width: 50px;
+        }
+      }
+    }
+    .banner-subtitle{
+      display: inline-block;
+      color: $color-white;
+      font-size: 20px;
+      margin-bottom: 20px;
+      line-height: 1;
+
+      span{
+        display: inline-block;
+        width: 22px;
+      }
+
+      @include sm-down {
+        font-size: 16px;
+      }
+    }
+
+    .banner-description {
+      display: flex;
+      justify-content: flex-start;
+      gap: 40px;
+      width: 100%;
+      max-width: 525px;
+      margin-left: 0 !important;
+      margin-right: auto;
+      .icon{
+        min-width: 60px;
+        max-width: 60px;
+      }
+      .text{
+        p{
+          font-size: 18px;
+          color: $text-ternary;
+          @include sm-down {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .providers {
+    margin-top: 40px;
+    @include lg-down {
+      margin-top: 30px;
+    }
+
+    img{
+      filter: grayscale(100%);
+    }
+  }
+}
+
+// Banner Two Section
+
+.banner-two{
+  padding-block-start: 155px;
+  padding-block-end: 90px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  height: min-content;
+  padding-left: 3%;
+  padding-right: 3%;
+  overflow: hidden;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+
+  .banner-content {
+    position: relative;
+    margin-bottom: 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+
+    @include xl(){
+    padding: 35px;
+    }
+
+    @include lg{
+      padding: 30px;  
+    }
+    @include md{
+      padding: 25px;
+    }
+
+    @include md-down{
+      padding: 20px;
+    }
+
+    .banner-subtitle{
+      display: inline-block;
+      color: $color-white;
+      font-size: 20px;
+      margin-bottom: 20px;
+      line-height: 1;
+
+      span{
+        display: inline-block;
+        width: 22px;
+      }
+
+      @include sm-down {
+        font-size: 16px;
+      }
+    }
+
+    .banner-description {
+      display: flex;
+      justify-content: flex-start;
+      gap: 40px;
+      width: 100%;
+      max-width: 525px;
+      margin-left: 0;
+      margin-right: auto;
+      margin-left: 0px;
+      .icon{
+        min-width: 60px;
+        max-width: 60px;
+      }
+      .text{
+        p{
+          font-size: 18px;
+          color: $text-ternary;
+          @include sm-down {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.banner-two-image{
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  z-index: 1;
+  transform: rotate(18deg);
+
+  @include lg-down{
+      max-width: 280px;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  img{
+    border-radius: 25px;
+    animation: slideDown 1.5s ease-out forwards;
+
+    @keyframes slideDown {
+      0% {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  }
+
+  &::before{
+    content: '';
+    position: absolute;
+    display: block;
+    right: 0;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(255,255,255,0.18);
+    border-radius: 25px;
+    transform: rotate(4deg);
+
+  }
+}
+
+.marquee-wrapper{
+  position: relative;
+  z-index: 1;
+
+  &::after{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -9px;
+    width: 100%;
+    height: 70px;
+    background: #F0F0F0;
+    transform: rotate(0.6deg);
+    z-index: -1;
+  }
+}
+
+.marquee {
+  background-color: $color-primary;
+  overflow: hidden;
+  .marquee-items {
+    @include flex($align: center);
+    .marquee-item {
+      @include flex($align: center, $gap: 10px);
+      white-space: nowrap;
+      padding-block: 25px;
+      padding-inline: 20px;
+      line-height: 1;
+      .marquee-item-img {
+        @include square(24px);
+      }
+      > h6 {
+        font-size: 22px;
+        color: $text-primary;
+      }
+    }
+  }
+}
+
+.color-switcher {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+.color-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+.color-btn:hover {
+  transform: scale(1.2);
+}
+
+.company-info{
+  &.style-two{
+    span{
+      color: $text-primary;
+    }
+  }
+  img{
+    margin-right: 4px;
+  }
+  span {
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: $color-white;
+    line-height: 1;
+  }
+}
+
+.banner-bottom{
+  margin-top: 150px;
+}
+
+.available-text{
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 15px;
+  border-radius: 50px;
+  border: 1px solid $color-white;
+
+  &.style-two{  
+    border: 1px solid $text-secondary;
+    background-color: $text-primary;
+  }
+
+  .circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: $color-primary;
+    box-shadow: 0 0 8px $color-primary;
+    display: inline-block;
+  }
+
+  h6{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+    color: $color-white;
+  }
+}
+
+.banner-three{
+  padding-block-start: 155px;
+  padding-block-end: 90px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  height: min-content;
+  overflow: hidden;
+  min-height: 90vh;
+}
+.banner-three-content{
+  padding-left: 50px;
+  position: relative;
+
+  .banner-vector{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-width: 250px;
+    opacity: 0.65;
+  }
+  h1{
+    font-size: 90px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-top: -25px;
+  }
+  p{
+    margin-bottom: 0;
+    font-size: 18px;
+    width: 50%;
+  }
+}
+.banner-award-card{
+  padding: 30px;
+  background-color: $color-sky-blue;
+  border-radius: 20px;  
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+  gap: 5px;
+  .view-btn{
+    transition: 0.4s ease;
+  }
+
+  &:hover{
+    .view-btn{
+      transform: scale(1.8);
+    }
+  }
+
+  .badge{
+    color: $text-primary;
+    background-color: $color-white;
+    border-radius: 30px;
+    padding: 6px 20px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+  }
+}
+
+.circle-buttons-container{
+  display: flex;
+  margin-top: 50px;
+  justify-content: flex-start;
+  .circle-button {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    overflow: hidden;
+    gap: 0;
+  }
+  
+  .circle-button.dark {
+    background-color: #222;
+    .content{
+      h3{
+        color: $color-white;
+        font-size: 15px;
+      }
+    }
+  }
+  
+  .circle-button.light {
+    background-color: #f0d78c;
+    color: #333;
+  }
+  
+  .circle-button .content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 30px;
+  }
+  
+  .circle-button h3 {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+  }
+  
+  .circle-button .arrow {
+    font-size: 20px;
+    transform: rotate(45deg);
+  }
+  
+  .fill-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-primary;
+    transform: scale(0);
+    border-radius: 50%;
+    z-index: 1;
+    transform-origin: 0% 0%; 
+  }
+}

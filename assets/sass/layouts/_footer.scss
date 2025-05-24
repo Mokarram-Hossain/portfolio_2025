@@ -1,0 +1,53 @@
+@use "../abstracts/" as *;
+
+.footer{
+    background-color: $text-primary;
+}
+
+.contact-info{
+    display: flex;
+    justify-content: flex-start;
+    gap: 25px;
+    align-items: center;
+
+    .icon{
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background-color: $color-dark-two;
+
+        svg{
+            fill: $color-primary;
+        }
+    }
+    .text{
+        span{
+            display: block;
+            font-size: 16px;
+            color: $text-light;
+            line-height: 1;
+        }
+        a{
+            color: $color-white;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: 500;
+        }
+    }
+}
+
+.footer-link-area{
+    background-color: $color-dark-three;
+    border-radius: 20px;
+    padding: 15px;
+    border: 1px solid $color-dark-two;
+}
+
+.footer-logo {
+    a{
+        display: inline-block;
+        max-width: 145px;
+    }
+}
+ 
+

@@ -1,0 +1,92 @@
+@use "../abstracts/" as *;
+
+.contact-list {
+     li{
+          display: flex;
+          justify-content: flex-start;
+          gap: 40px;
+          flex-wrap: wrap;
+          margin-bottom: 35px;
+          .icon{
+               i{
+                    font-size: 50px;
+                    color: $color-primary;
+               }
+          }
+          .contact-details{
+               p{
+                    font-size: 16px;
+                    color: $color-white;
+                    opacity: 70%;
+                    margin-bottom: 0;
+               }
+               a{
+                    display: block;
+                    font-size: 40px;
+                    color: $color-white;
+
+                    @include lg-down{
+                         font-size: 20px;
+                    }
+               }
+          }
+     }
+}
+
+
+
+.social-list{
+     display: flex;
+     flex-direction: row;
+     justify-content: flex-start;
+     gap: 25px;
+
+     &.style-two{
+          li{
+               a{
+                    background-color: $color-dark-two;
+
+                    i{
+                         color: $color-white;
+                    }
+
+                    &:hover{
+                         background-color: $color-primary;
+
+                         i{
+                              color: $color-dark-two;
+                         }
+                    }
+               }
+          }
+     }
+     li{
+          a{
+               height: 36px;
+               width: 36px;
+               border-radius: 50%;
+               background-color: $color-white;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               transition: 0.4s ease;
+
+               &:hover{
+                    background-color: $text-primary;
+
+                    i{
+                         color: $color-white;
+                    }
+               }
+
+               i{
+                    font-size: 17px;
+                    transition: inherit;
+                    line-height: 1;
+                    vertical-align: middle;
+                    color: $text-primary;
+               }
+          }
+     }
+}
+

@@ -1,0 +1,47 @@
+@use "../abstracts/" as *;
+
+.form-label {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  @include flex($align: center, $gap: 10px);
+  color: $text-primary;
+
+  > span {
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+
+.form-control,
+.form-select {
+  height: 56px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: $radius-8;
+  background-color: $bg-light;
+  border: 1px solid transparent;
+  outline: none;
+
+  &:focus {
+    border: 1px solid $color-primary;
+    box-shadow: unset;
+  }
+}
+.form-control {
+  padding-inline: 15px;
+  &::placeholder {
+    color: $text-secondary;
+    font-size: 16px;
+  }
+}
+
+textarea.form-control {
+  height: unset;
+  min-height: 120px;
+}
+.form-select {
+  -webkit-padding-start: 15px;
+  padding-inline-start: 15px;
+}
+

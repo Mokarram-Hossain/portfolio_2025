@@ -1,0 +1,108 @@
+@use "../abstracts/" as *;
+.list-style-one{
+     display: flex;
+     flex-direction: row;
+     justify-content: flex-start;
+     gap: 8px;
+     align-items: center;
+     flex-wrap: wrap;
+
+     a{
+          text-decoration: none;
+          color: $color-white;
+          font-size: 16px;
+          font-weight: 500;
+          border: 1px solid rgba(255, 255, 255, 0.09);
+          border-radius: $radius-pill;
+          padding: 4px 20px;
+          position: relative;
+          z-index: 1;
+          display: inline-block;
+          transition: 0.6s ease;
+
+          &:hover{
+               color: $text-primary;
+               &::after{
+                 transform: translate(-50%, -50%) scale(1);
+                 opacity: 1;
+               }
+
+             }
+
+             &::after{
+               content: '';
+               position: absolute;
+               bottom: 0px;
+               left: 0;
+               display: block;
+               z-index: -1;
+               width: 100%;
+               background-color: $color-primary;
+               height: 100%;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%) scale(0.4);
+               transition: 0.6s ease;
+               transform-origin: center;
+               border-radius: 50px;
+               opacity: 0;
+             }
+     }
+}
+
+
+.list-style-two{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+
+  a{
+       text-decoration: none;
+       color: $text-primary;
+       font-size: 16px;
+       font-weight: 500;
+       border: 1px solid $border-primary;
+       border-radius: $radius-pill;
+       padding: 4px 20px;
+       position: relative;
+       z-index: 1;
+       display: inline-block;
+       transition: 0.6s ease;
+       overflow: hidden;
+
+       @include md-down{
+        font-size: 15px;
+       }
+
+       &:hover{
+            color: $text-primary;
+            &::after{
+              transform: translate(-50%, -50%) scale(1);
+              opacity: 1;
+            }
+
+          }
+
+          &::after{
+            content: '';
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            display: block;
+            z-index: -1;
+            width: 100%;
+            background-color: $color-primary;
+            height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.4);
+            transition: 0.6s ease;
+            transform-origin: center;
+            border-radius: 50px;
+            opacity: 0;
+          }
+  }
+}

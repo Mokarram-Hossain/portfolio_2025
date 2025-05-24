@@ -1,0 +1,85 @@
+@use "../abstracts/" as *;
+
+.award-text {
+     font-size: 60px;
+     font-weight: 500;
+     background-color: $color-white;
+     transform: rotate(-45deg);
+     display: inline-block;
+     line-height: 1;
+     color: $text-primary;
+ }
+
+ .award-text::after {
+     content: attr(data-text); 
+     letter-spacing: 1px;
+     position: absolute;
+     top: 25px; 
+     left: 7px;
+     font-size: 60px;
+     font-weight: inherit;
+     color: $color-white; 
+     opacity: 0.12;
+     text-shadow: 
+       -1px -1px 0 #000, 
+        1px -1px 0 #000, 
+       -1px  1px 0 #000, 
+        1px  1px 0 #000; 
+     z-index: -1;
+   }
+
+table.award-table {
+     width: 100%;
+     border-collapse: collapse;
+     
+      tr {
+          border-bottom: 1px solid #eaeaea;
+      }
+     
+      td {
+          padding: 20px 0;
+          font-size: 18px;
+          font-weight: 500;
+          color: $text-primary;
+      }
+     
+      td:nth-child(2) {
+          text-align: center;
+      }
+     
+      td:last-child {
+          text-align: right;
+      }
+
+       @media (max-width: 480px) {
+           td, td:nth-child(2), td:last-child {
+               display: block;
+               text-align: left;
+               padding: 8px 0;
+           }
+      
+           tr {
+               display: block;
+               padding: 16px 0;
+           }
+       }
+ }
+
+ .award-left{
+     position: relative;
+     min-height: 220px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+     .twinkle-pink{
+          position: absolute;
+          left: 35%;
+          top: 45px;
+     }
+     .twinkle-black{
+          position: absolute;
+          right: 20%;
+          bottom: 15px;
+     }
+ }

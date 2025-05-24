@@ -1,0 +1,225 @@
+@use "../abstracts/" as *;
+
+.m-btn {
+  @include inline-flex($align: center, $justify: center);
+  font-family: $font-primary;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: $radius-10;
+  -webkit-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  text-decoration: none;
+
+  &.btn--sm {
+    padding: 8px 12px;
+    font-size: 14px;
+    column-gap: 6px;
+  }
+
+  &.btn--md {
+    padding: 10px 18px;
+    font-size: 16px;
+    column-gap: 8px;
+  }
+
+  &.btn--lg {
+    display: inline-block;
+    padding: 12px 24px !important;
+    font-size: 18px;  
+    font-weight: 500;
+
+    img{
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  &.btn--xl {
+    padding: 16px 30px;
+    font-size: 16px;
+    column-gap: 10px;
+  }
+
+  &.pill {
+    border-radius: $radius-pill;
+  }
+
+  &.btn--primary {
+    color: $text-primary;
+
+    &:hover{
+      span{
+        &:last-child{
+          animation: press 0.35s linear alternate;
+        }
+      }
+    }
+    span{
+      display: inline-block;
+      background-color: $color-primary;
+      border: 1px solid $color-primary;
+      padding: 14px 20px;
+      border-radius: 30px;
+      line-height: 1;
+      &:last-child{
+        min-width: 40px;
+        height: 40px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  @keyframes press {
+    0%{
+      transform: translateX(0);
+    }
+    50%{
+      transform: translateX(7px);
+    }
+    100%{
+      transform: translateX(0);
+    }
+  }
+
+  &.btn--outline {
+    color: $text-primary !important;
+
+    &:hover{
+      background-color: $color-primary;
+        border: 1px solid $color-primary;
+        &:last-child{
+          animation: press 0.35s linear alternate;
+        }
+    }
+  }
+
+  &.btn--danger {
+    border: 1px solid $color-danger;
+    background-color: $color-danger;
+    color: $text-ternary;
+    &.outline {
+      border: 1px solid $color-danger-light;
+      color: $color-danger;
+      background-color: transparent;
+      &:hover {
+        border: 1px solid $color-danger;
+        background-color: $color-danger;
+        color: $text-ternary;
+      }
+    }
+  }
+
+  &.btn--success {
+    background-color: $color-success;
+    border: 1px solid $color-success;
+    color: $text-ternary;
+    &.outline {
+      border: 1px solid $color-success-light;
+      color: $color-success;
+      background-color: transparent;
+      &:hover {
+        background-color: $color-success;
+        border: 1px solid $color-success;
+        color: $text-ternary;
+      }
+    }
+  }
+
+  &.btn--info {
+    background-color: $color-info;
+    border: 1px solid $color-info;
+    color: $text-ternary;
+    &.outline {
+      border: 1px solid $color-info-light;
+      color: $color-info;
+      background-color: transparent;
+      &:hover {
+        background-color: $color-info;
+        border: 1px solid $color-info;
+        color: $text-ternary;
+      }
+    }
+  }
+
+  &.btn--warning {
+    background-color: $color-warning;
+    border: 1px solid $color-warning;
+    color: $text-ternary;
+    &.outline {
+      border: 1px solid $color-warning-light;
+      color: $color-warning;
+      background-color: transparent;
+      &:hover {
+        background-color: $color-warning;
+        border: 1px solid $color-warning;
+        color: $text-ternary;
+      }
+    }
+  }
+
+  &.btn--dark {
+    background-color: $color-dark-two;
+    border: 1px solid $color-dark-light;
+    color: $color-white;
+
+    &.outline {
+      border: 1px solid $color-dark-light;
+      color: $color-dark;
+      background-color: transparent;
+      &:hover {
+        background-color: $color-dark;
+        border: 1px solid $color-dark;
+        color: $text-ternary;
+      }
+    }
+  }
+
+  &.btn--white {
+    background-color: $color-white;
+    border: 1px solid $color-white;
+    color: $text-primary;
+  }
+}
+
+.btn-outline{
+  border: 2px solid #dadce0;
+  color: $text-primary !important;
+
+  &:hover{
+    background-color: $color-primary;
+    border: 2px solid $color-primary;
+
+  }
+}
+
+
+.arrow-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: $color-white;
+  @include transition-4;
+
+  &:hover{
+    background-color: $color-primary;
+  }
+}
+
+a{
+  color: var(--text-primary);
+}

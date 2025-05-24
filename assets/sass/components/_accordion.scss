@@ -1,0 +1,101 @@
+@use "../abstracts/" as *;
+
+.accordion-wrapper {
+  .accordion-item {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+    border: 1px solid $border-primary;
+    border-radius: $radius-12 !important;
+    overflow: hidden;
+    .accordion-button {
+      font-weight: 500;
+      font-size: 18px;
+      background: $color-white;
+      color: $text-primary;
+      padding-block: 20px;
+      padding-inline-end: 40px;
+      padding-inline-start: 18px;
+      position: relative;
+      transition: 0.3s linear;
+      line-height: 1.6;
+
+      &:hover{
+        background-color: $color-primary;
+        color: $color-white;
+      }
+      > i {
+        margin-right: 10px;
+        font-size: 16px;
+      }
+
+      @include md-down {
+        padding-block: 15px;
+        padding-inline-end: 35px;
+        padding-inline-start: 18px;
+      }
+      @include sm-down {
+        font-size: 16px;
+      }
+
+      &:focus {
+        z-index: unset;
+        border-color: unset;
+        outline: 0;
+        background: unse;
+        box-shadow: unset;
+        color: $text-primary;
+      }
+
+      &::after {
+        flex-shrink: 0;
+        width: unset;
+        height: unset;
+        margin-left: auto;
+        background-image: none;
+        background-repeat: unset;
+        background-size: unset;
+        font-family: bootstrap-icons !important;
+        font-size: 20px;
+        position: absolute;
+        inset-inline-end: 15px;
+        inset-block: 50%;
+        transform: translateY(-50%);
+        content: "\F282";
+        transition: unset;
+        color: $text-primary;
+        @include flex($align: center, $justify: center);
+        transition: all 0.3s ease;
+        @include sm-down {
+          font-size: 15px;
+        }
+      }
+
+      &:not(.collapsed)::after {
+        background-image: none;
+        transform: unset;
+        font-family: bootstrap-icons !important;
+        content: "\F286";
+        top: 50%;
+        transform: translateY(-50%);
+        color: $color-white;
+      }
+
+      &:not(.collapsed) {
+        box-shadow: unset;
+        background: $color-primary;
+        color: $color-white;
+      }
+    }
+
+    .accordion-body {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 30px;
+      border-top: 1px solid $border-primary;
+      text-align: left;
+      padding: 25px;
+      background: $color-white;
+    }
+  }
+}

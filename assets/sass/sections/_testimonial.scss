@@ -1,0 +1,163 @@
+@use "../abstracts/" as *;
+
+
+.testimonial-item{
+     padding: 40px;
+     background-color: $color-dark-two;
+     z-index: 1;
+     position: relative;
+
+     .quote-icon{
+          position: absolute;
+          bottom: 0;
+          right: 10px;
+          z-index: -1;
+     }
+
+     .content{
+          margin-bottom: 100px;
+          span{
+               display: inline-block;
+               color: $color-white;
+               font-size: 16px;
+               font-weight: 500;
+          }
+          h4{
+               font-size: 30px;
+               color: $color-white;
+          }
+     }
+
+     .profile-image{
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          overflow: hidden;
+
+          img{
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+          }
+     }
+     .profile{
+          display: flex;
+          gap: 20px;
+          justify-content: flex-start;
+          align-items: center;
+          .profile-info{
+               h5{
+                    font-size: 22px;
+                    font-weight: 500;
+                    color: $color-white;
+               }
+               p{
+                    margin-bottom: 0;
+                    font-size: 16px;
+                    color: $text-light;
+               }
+          }
+     }
+}
+
+.review-info{
+     display: flex;
+     justify-content: flex-end;
+     align-items: flex-start;
+     gap: 10px;
+
+     .number{
+          h3{
+               color: $color-primary;
+               font-size: 32px;
+          }
+     }
+     .text{
+          text-align: start;
+          p{
+               color: $text-light;
+               margin-bottom: 0px;
+
+               span{
+                    display: inline-block;
+                    color: $color-primary;
+               }
+          }
+     }
+}
+
+.testimonial-item-two{
+     padding: 40px;
+     border-radius: 12px;
+     transition: transform 0.3s ease;
+   
+     &:hover{
+       .icon img {
+         transform: scale(1.2);
+       }
+     }
+   
+     &.bg-purple {
+       background-color: #E8C9FC;
+     }
+     &.bg-yellow {
+       background-color: #F3DD9A;
+     }
+     &.bg-green {
+       background-color:  #A7E5BD;
+     }
+     &.bg-coral {
+       background-color: #F8BDAA;
+     }
+     &.bg-mint {
+       background-color:  #89F09C;
+     }
+     &.bg-blue {
+       background-color: #A2DDF7;
+     }
+
+   
+     .content h4 {
+       font-size: 32px;
+       margin-bottom: 20px;
+     }
+   
+     .content p {
+       font-size: 22px;
+       font-weight: 400;
+       margin-bottom: 50px;
+       line-height: 1.5;
+       color: $text-primary;
+     }
+
+     .profile-image{
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          overflow: hidden;
+
+          img{
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+          }
+     }
+     .profile{
+          display: flex;
+          gap: 20px;
+          justify-content: flex-start;
+          align-items: center;
+          .profile-info{
+               h5{
+                    font-size: 22px;
+                    font-weight: 500;
+               }
+               p{
+                    margin-bottom: 0;
+                    font-size: 16px;
+               }
+          }
+     }
+
+
+}

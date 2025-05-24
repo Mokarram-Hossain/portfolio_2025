@@ -1,0 +1,563 @@
+@use "../abstracts/" as *;
+
+.section-title {
+  &.big{
+    h2{
+      font-size: 70px;
+
+      @include lg-down{
+        font-size: 30px;
+   }
+    }
+    span{
+      display: inline-block;
+    }
+    .description{
+      padding-left: 20%;
+      p{
+        margin-top: -5px;
+      }
+    }
+  }
+
+  &.dark-mode{
+    h2{
+      color: $color-pink-light;
+    }
+    p{
+      color: $text-light;
+    }
+  }
+
+  h2 {
+    font-size: 60px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    line-height: 1.1;
+    margin-top: -10px;
+    @include sm-down {
+      font-size: 32px;
+    }
+    @include sm {
+      font-size: 42px;
+    }
+    @include md {
+      font-size: 42px;
+    }
+
+    @include lg {
+      font-size: 45px;
+    }
+    @include xl {
+      font-size: 45px;
+    }
+    @include xxl {
+      font-size: 48px;
+    }
+
+    span{
+      font-family: $font-secondary;
+      display: block;
+    }
+  }
+  .description{
+    padding-left: 30%;
+      @include lg-down{
+        padding-left: 15%;
+      }
+    p {
+      font-size: 16px;
+      color: $text-secondary;
+    }
+  }
+
+  &:is(.title-fluid) {
+    @include flex($align: start, $justify: space-between, $gap: 100px);
+    @include lg {
+      @include flex($gap: 50px);
+    }
+
+    @include lg-down {
+      flex-wrap: wrap;
+      @include flex($gap: 30px);
+    }
+
+    &:has(.title-left, .title-right) {
+      .title-left {
+        flex: 0 0 42%;
+        @include lg {
+          flex: 0 0 50%;
+        }
+        @include lg-down {
+          flex: 0 0 100%;
+        }
+      }
+      .title-right {
+        @include flex($direction: column, $justify: end);
+        p {
+          margin-block-end: 25px;
+        }
+      }
+    }
+  }
+  &:is(.title-secondary) {
+    > h2 {
+      color: $color-white;
+    }
+    > p {
+      color: $text-ternary;
+      opacity: 0.95;
+    }
+  }
+}
+
+.section-subtitle{
+  text-align: center;
+  border: 1px solid $border-primary;
+  padding: 2px 16px;
+  border-radius: 50px;
+  display: inline-block;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  p{
+    margin-bottom: 0px;
+    font-size: 18px;
+    font-weight: 500;
+    color: $text-primary;
+  }
+
+  &.dark-mode {
+    background-color: $text-primary;
+    border: 1px solid  rgba(255,255,255,0.2);
+    p{
+      color: $color-white;
+    }
+  }
+}
+
+.description-title{
+  h4{
+    margin-bottom: 0;
+    font-size: 45px;
+    line-height: 1.3;
+    font-weight: 400;
+
+    span{
+      display: inline-block !important;
+      color: $text-light;
+    }
+  }
+}
+
+.section-title-two{
+
+  &.dark-mode {
+    .wrapper{
+      h2{
+        color: $color-white;
+      }
+      p{
+        color: $text-light;
+      }
+    }
+  }
+
+  .wrapper{
+    width: 100%;
+    max-width: 500px;
+    h2{
+      font-size: 60px;
+      line-height: 1.12;
+      margin-bottom: 20px;
+      color: $text-primary;
+        @include lg-down{
+        font-size: 30px;
+   }
+    }
+    p{
+      font-size: 18px;
+      color: $text-secondary;
+    }
+  }
+}
+
+.section-title-three{
+  &.dark-mode{
+    h2{
+      color: $color-white;
+    }
+    .description{
+      p{
+        color: $text-light;
+      }
+    }
+  }
+  h2{
+    font-size: 60px;
+    margin-bottom: 0px;
+      @include lg-down{
+        font-size: 30px;
+   }
+  }
+  .description{
+    padding-left: 35%;
+    p{
+      font-size: 18px;
+    }
+  }
+}
+
+.section-title-four{
+  text-align: center;
+  h2{
+    text-transform: uppercase;
+    font-size: 120px;
+
+      @include lg-down{
+        font-size: 30px;
+   }
+  }
+  span{
+    display: inline-block;
+    font-size: 20px;
+    background-color: $color-white;
+    border: 4px solid $color-dark;
+    font-weight: 500;
+    border-radius: 30px;
+    color: $text-primary;
+    text-align: center;
+    padding: 8px 20px;
+    transform: rotate(-10deg) translateY(-50px);
+    line-height: 1;
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.card-height-100 {
+  height: 100%;
+}
+.w-fit-content {
+  width: fit-content !important;
+}
+.w-max-content {
+  width: max-content !important;
+}
+
+.space-wrap {
+  white-space: wrap;
+}
+.space-nowrap {
+  white-space: nowrap;
+}
+
+
+.text-primary {
+  color: $color-primary !important;
+}
+
+.text-secondary {
+  color: $color-secondary !important;
+}
+
+.text-dark {
+  color: $text-primary !important;
+}
+.text-danger {
+  color: $color-danger !important;
+}
+
+.text-success {
+  color: $color-success !important;
+}
+
+.text-warning {
+  color: $color-warning !important;
+}
+
+.text-info {
+  color: $color-info !important;
+}
+
+.bg--primary {
+  background-color: $color-primary !important;
+}
+
+.bg--primary-soft {
+  background-color: $color-primary-soft !important;
+}
+
+.bg--secondary {
+  background-color: $color-secondary !important;
+}
+
+.bg--secondary-soft {
+  background-color: $color-secondary-soft !important;
+}
+
+.bg--transparent {
+  background-color: transparent !important;
+}
+.bg--danger {
+  background-color: $color-danger !important;
+}
+
+.bg--success {
+  background-color: $color-success !important;
+}
+
+.bg--warning {
+  background-color: $color-warning !important;
+}
+
+.bg--info {
+  background-color: $color-info !important;
+}
+.card-bg {
+  background-color: $card-bg !important;
+}
+
+.bg--danger-light {
+  background-color: $color-danger-light !important;
+}
+
+.bg--success-light {
+  background-color: $color-success-light !important;
+}
+
+.bg--warning-light {
+  background-color: $color-warning-light !important;
+}
+
+.bg--info-light {
+  background-color: $color-info-light !important;
+}
+
+.bg--primary {
+  background-color: $color-primary !important;
+}
+
+.bg--primary-light {
+  background-color: $color-primary-soft !important;
+}
+
+.bg--dark {
+  background-color: $text-primary !important;
+}
+
+.bg--dark-light {
+  background-color: $color-dark-light !important;
+}
+
+.bg--light{
+  background-color: $bg-light;
+}
+
+// Padding
+.pt-120 {
+  padding-block-start: 120px;
+  @include lg {
+    padding-block-start: 100px;
+  }
+
+  @include lg-down {
+    padding-block-start: 80px;
+  }
+}
+
+.pb-120 {
+  padding-block-end: 120px;
+  @include lg {
+    padding-block-end: 100px;
+  }
+  @include lg-down {
+    padding-block-end: 80px;
+  }
+}
+
+.pt-110 {
+  padding-block-start: 110px;
+  @include lg {
+    padding-block-start: 100px;
+  }
+
+  @include lg-down {
+    padding-block-start: 80px;
+  }
+}
+
+.pb-110 {
+  padding-block-end: 110px;
+  @include lg {
+    padding-block-end: 100px;
+  }
+  @include lg-down {
+    padding-block-end: 80px;
+  }
+}
+
+.pt-60 {
+  padding-block-start: 60px;
+}
+.pt-50 {
+  padding-block-start: 50px;
+}
+.pt-40 {
+  padding-block-start: 40px;
+}
+.pt-30 {
+  padding-block-start: 30px;
+}
+.pt-20 {
+  padding-block-start: 20px;
+}
+.pt-10 {
+  padding-block-start: 10px;
+}
+
+.pb-60 {
+  padding-block-end: 60px;
+}
+.pb-50 {
+  padding-block-end: 50px;
+}
+
+.pb-40 {
+  padding-block-end: 40px;
+}
+
+.pb-30 {
+  padding-block-end: 30px;
+}
+
+.pb-20 {
+  padding-block-end: 20px;
+}
+
+.pb-10 {
+  padding-block-end: 10px;
+}
+
+// Margin
+.mb-120 {
+  margin-block-end: 120px;
+  @include lg {
+    margin-block-end: 100px;
+  }
+  @include lg-down {
+    margin-block-end: 80px;
+  }
+}
+
+.mt-110 {
+  margin-block-start: 110px;
+}
+
+.mb-70 {
+  margin-block-end: 70px;
+
+  @include lg-down{
+    margin-bottom: 50px;
+  }
+}
+
+.mb-60 {
+  margin-block-end: 60px;
+
+  @include lg-down{
+    margin-bottom: 45px;
+  }
+}
+.mb-50 {
+  margin-block-end: 50px;
+}
+
+.mb-40 {
+  margin-block-end: 40px;
+}
+
+.mb-30 {
+  margin-block-end: 30px;
+}
+
+.mb-20 {
+  margin-block-end: 20px;
+
+  @include md-down{
+    margin-block-end: 20px;
+  }
+}
+
+.mb-10 {
+  margin-block-end: 10px;
+}
+
+.mt-120 {
+  margin-block-start: 120px;
+  @include lg {
+    margin-block-start: 100px;
+  }
+  @include lg-down {
+    margin-block-start: 80px;
+  }
+}
+.mt-60 {
+  margin-block-start: 60px;
+}
+.mt-50 {
+  margin-block-start: 50px;
+}
+.mt-40 {
+  margin-block-start: 40px;
+}
+.mt-30 {
+  margin-block-start: 30px;
+}
+.mt-20 {
+  margin-block-start: 20px;
+}
+.mt-10 {
+  margin-block-start: 10px;
+}
+
+.img-adjust{
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+button{
+  background: unset;
+}
+
+.hover-line{
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+
+  &:hover{
+ 
+    &::after{
+      opacity: 1;
+      left: 0;
+      width: 100%;
+    }
+
+  }
+  &::after{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    display: block;
+    z-index: -1;
+    width: 0%;
+    background-color: $text-primary;
+    height: 2px;
+    transition: 0.5s;
+    border-radius: 50px;
+    opacity: 0;
+    transform-origin: left;
+  }
+}

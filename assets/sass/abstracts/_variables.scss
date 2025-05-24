@@ -1,0 +1,236 @@
+@use "./mixins/index" as *;
+@forward "typography";
+
+:root {
+  // Font family
+  --font-primary: "Kanit", sans-serif;
+  --font-secondary: "Italiana", sans-serif;
+
+  // Theme base color start
+  --color-primary: rgb(185, 254, 56);
+  
+  --color-primary-soft: #f0f3fa;
+  --color-primary-light: rgba(185, 254, 56,0.3);
+
+  --color-pink-light:  #FFE4E4;
+  --color-sky-blue: #A2DDF7;
+  --color-light-green: #A7E5BD;
+  --color-light-yellow: #F3DD9A;
+  ;
+
+  // Color secondary
+  --color-secondary: rgb(99, 150, 248);
+  --color-secondary-soft: rgba(99, 150, 248,0.2);
+
+  // Color success
+  --color-success: #03c988;
+  --color-success-light: rgba(35, 197, 129, 0.2);
+
+  // Color danger
+  --color-danger: #d92d20;
+  --color-danger-light: rgba(255, 37, 37, 0.15);
+
+  // Color warning
+  --color-warning: #E08B0D; 
+  --color-warning-light: rgba(247, 184, 75, 0.2);
+
+  // Color info
+  --color-info: rgb(0, 78, 195);
+  --color-info-light: rgba(0, 78, 195, 0.2);
+
+  // Color dark
+  --color-dark: #101010;
+  --color-dark-light: rgb(21, 33, 48, 0.1);
+  --color-dark-two: #252525;
+  --color-dark-three: #1d1d1d;
+
+
+  // Base text color
+  --text-primary: #1A1A1A;
+  --text-secondary: #525252;
+  --text-ternary: #c3c3c3;
+  --text-white: #ffffff;
+  --text-light: #999999;
+  --color-primary-text: #fcfcfc;
+
+  // Border color
+  --border-primary: #D8D8D8;
+  --border-secondary: #D8D8D8;
+  --border: #dedede;
+  --color-white: #fff;
+
+  // Base Layout color
+  --site-bg: #fff;
+  --card-bg: #f6f7f9;
+  --topbar-bg: rgba(255, 255, 255, 0.676);
+  --sidebar-bg: #e9f0ff;
+  --footer-bg: #fff;
+  --bg-light: #F5F5F5;
+
+  // Base Border radius
+  --radius-4: 4px;
+  --radius-5: 5px;
+  --radius-8: 8px;
+  --radius-10: 12px;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-20: 20px;
+  --radius-24: 24px;
+  --radius-28: 28px;
+  --radius-32: 32px;
+  --radius-36: 36px;
+  --radius-pill: calc(infinity * 1px);
+  --radius-rounded: 50%;
+}
+
+// Media color preference start
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     color-scheme: dark;
+//     --text-primary: #f9fafb;
+//     --text-secondary: #9ca3af;
+//     --text-ternary: #e2e2e2;
+//     --border-primary: #495057;
+//     --border-secondary: #28272a;
+
+//     --color-white: #1d242d;
+//     --color-gray-1: rgba(31, 41, 55, 0.5019607843);
+//     --gray-200: #212529;
+//     --color-dark: #d1d1d1;
+//     --color-dark-light: rgb(209, 209, 209, 10%);
+//     --site-bg: #212529;
+//     --card-bg: #1b1f22;
+//     --topbar-bg: #292e32;
+//     --sidebar-bg: #292e32;
+//     --footer-bg: #292e32;
+//   }
+// }
+
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     color-scheme: light;
+//     --text-primary: #15192c;
+//     --text-secondary: #6b7280;
+//     --text-ternary: #f0f0f0;
+//     --border-primary: #d0d5dd;
+//     --border-secondary: #e9ebed;
+
+
+//     --color-white: #fff;
+//     --color-gray-1: #eff2f7;
+
+//     --color-dark: #152130;
+//     --site-bg: #fff;
+//     --card-bg: #f6f7f9;
+//     --topbar-bg: rgb(25 34 39 / 80%);
+//     --sidebar-bg: #ffffff;
+//     --footer-bg: #fff;
+//   }
+// }
+// Media color preference end
+
+// [data-bs-theme="dark"] {
+//   color-scheme: dark;
+//   --text-primary: #f9fafb;
+//   --text-secondary: #9ca3af;
+//   --text-ternary: #e2e2e2;
+//   --border-primary: #495057;
+//   --border-secondary: #28272a;
+
+
+//   --color-white: #1d242d;
+//   --color-gray-1: rgba(31, 41, 55, 0.5019607843);
+//   --gray-200: #212529;
+//   --color-dark: #d1d1d1;
+//   --color-dark-light: rgb(209, 209, 209, 10%);
+//   --site-bg: #212529;
+//   --card-bg: #1b1f22;
+//   --topbar-bg: #292e32;
+//   --sidebar-bg: #292e32;
+//   --footer-bg: #292e32;
+// }
+
+// [data-bs-theme="light"] {
+//   color-scheme: light;
+//   --text-primary: #15192c;
+//   --text-secondary: #6b7280;
+//   --text-ternary: #f0f0f0;
+//   --border-primary: #d0d5dd;
+//   --border-secondary: #e9ebed;
+
+
+//   --color-white: #fff;
+
+//   --color-dark: #152130;
+//   --site-bg: #f9f9fc;
+//   --card-bg: #fff;
+//   --topbar-bg: rgb(25 34 39 / 80%);
+//   --sidebar-bg: #ffffff;
+//   --footer-bg: #fff;
+// }
+
+// SASS ROOT VARIABLES
+$font-primary: var(--font-primary);
+$font-secondary: var(--font-secondary);
+// Theme base color start
+$color-primary: var(--color-primary);
+$color-primary-soft: var(--color-primary-soft);
+$color-primary-light: var(--color-primary-light);
+
+$color-pink-light: var(--color-pink-light);
+$color-sky-blue: var(--color-sky-blue);
+$color-light-green : var(--color-light-green);
+$color-light-yellow : var(--color-light-yellow);
+
+$color-secondary: var(--color-secondary);
+$color-secondary-soft: var(--color-secondary-soft);
+
+$color-success: var(--color-success);
+$color-success-light: var(--color-success-light);
+
+$color-danger: var(--color-danger);
+$color-danger-light: var(--color-danger-light);
+
+$color-warning: var(--color-warning);
+$color-warning-light: var(--color-warning-light);
+
+$color-info: var(--color-info);
+$color-info-light: var(--color-info-light);
+
+$color-dark: var(--color-dark);
+$color-dark-light: var(--color-dark-light);
+$color-dark-two: var(--color-dark-two);
+$color-dark-three: var(--color-dark-three);
+
+// Base text color
+$text-primary: var(--text-primary);
+$text-secondary: var(--text-secondary);
+$text-ternary: var(--text-ternary);
+$color-primary-text: var(--color-primary-text);
+$text-light: var(--text-light);
+// Border color
+$border-primary: var(--border-primary);
+$border-secondary: var(--border-secondary);
+$color-white: var(--color-white);
+
+// Layout background
+$site-bg: var(--site-bg);
+$card-bg: var(--card-bg);
+$topbar-bg: var(--topbar-bg);
+$sidebar-bg: var(--sidebar-bg);
+$footer-bg: var(--footer-bg);
+$bg-light: var(--bg-light);
+
+// Radius
+$radius-4: var(--radius-4);
+$radius-8: var(--radius-8);
+$radius-12: var(--radius-12);
+$radius-10: var(--radius-10);
+$radius-16: var(--radius-16);
+$radius-20: var(--radius-20);
+$radius-24: var(--radius-24);
+$radius-28: var(--radius-28);
+$radius-32: var(--radius-32);
+$radius-36: var(--radius-36);
+$radius-pill: var(--radius-pill);
+$radius-rounded: var(--radius-rounded);

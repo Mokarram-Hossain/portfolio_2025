@@ -1,0 +1,48 @@
+@use "../abstracts/" as *;
+
+.newsletter-form {
+  text-align: center;
+  margin-top: 30px;
+  .input-wrapper {
+    @include flex($align: center);
+    margin-block-end: 15px;
+    border: 1px solid $border-primary;
+    background-color: $color-primary-soft;
+    border-radius: $radius-pill;
+    padding: 2px;
+    > input {
+      border: none;
+      padding: 10px 20px;
+      width: 100%;
+      background-color: transparent;
+      font-size: 16px;
+       @include sm-down {
+        padding: 6px 12px;
+        font-size: 16px;
+      }
+    }
+    .i-btn.btn--xl {
+      padding: 20px 45px;
+      font-size: 22px;
+      column-gap: 10px;
+      @include md-down {
+        padding: 15px 16px;
+      }
+
+      @include sm-down {
+        padding: 10px 11px;
+        font-size: 20px;
+      }
+
+      @include md {
+        padding: 15px 30px;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.news-button{
+  padding: 18px 28px;
+  border-radius: 30px;
+}

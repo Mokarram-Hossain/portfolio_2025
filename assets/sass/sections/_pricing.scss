@@ -1,0 +1,127 @@
+@use "../abstracts/" as *;
+
+.pricing-item {
+     background-color: #fff;
+     border-radius: 20px;
+     padding: 50px 45px;
+     text-align: left;
+
+     @include md-down{
+        padding: 30px 25px;
+     }
+ 
+     .header {
+         margin-bottom: 25px;
+ 
+         h2 {
+             font-size: 28px;
+             margin-bottom: 15px;
+             color: $text-primary;
+
+             @include md-down{
+                font-size: 22px;
+             }
+         }
+ 
+         p {
+             font-size: 18px;
+             color: $text-primary;
+             @include md-down{
+                font-size: 16px;
+             }
+         }
+     }
+ 
+     .body {
+         .price {
+             font-size: 45px;
+             font-weight: 500;
+             color: $text-primary;
+             margin-bottom: 30px;
+
+             @include md-down{
+                font-size: 34px;
+             }
+ 
+             span {
+                 font-size: 18px;
+                 font-weight: 400;
+                 color: $text-primary;
+             }
+         }
+ 
+         .list-title {
+             font-size: 22px;
+             font-weight: 500;
+             color: $text-primary;
+             margin-bottom: 15px;
+             text-align: left;
+
+             @include md-down{
+                font-size: 16px;
+             }
+         }
+ 
+        
+     }
+ 
+     &.style-blue {
+         background-color: $color-sky-blue;
+     }
+ 
+     &.style-green {
+         background-color: $color-light-green;
+     }
+ 
+     &.style-yellow {
+         background-color: $color-light-yellow;
+     }
+ }
+
+ ul.plan-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+
+    &.style-2{
+        li{
+            color: $color-white;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            font-size: 20px;
+
+              @include lg-down{
+                        font-size: 16px;
+                }
+
+            svg{
+                    fill: $color-white !important;
+                    width: 28px;
+                    height: 20px;
+                    margin-top: 6px;
+                    margin-right: 8 px;
+                }
+
+            span{
+                display: inline-block;
+                
+            }
+        }
+    }
+
+    li {
+        font-size: 18px;
+        color: $text-primary;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: flex-start;
+
+        @include md-down{
+           font-size: 16px;
+        }
+
+        span{
+           margin-right: 5px;
+        }
+    }
+}

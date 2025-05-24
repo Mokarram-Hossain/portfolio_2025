@@ -1,0 +1,17 @@
+@use "../abstracts/" as *;
+
+.video-container {
+     position: relative;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     overflow: hidden;
+   }
+   
+   video {
+     width: 100%;
+     height: auto;
+     transform: scale(0.5); 
+     transition: transform 0.5s ease; 
+   }
