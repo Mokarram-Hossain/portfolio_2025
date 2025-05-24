@@ -2320,7 +2320,7 @@ header .main-nav ul li.menu-item-has-children > i {
 }
 @media (max-width: 767.98px) {
   .banner-two .banner-content {
-    padding: 20px;
+    padding: 0px;
   }
 }
 .banner-two .banner-content .banner-subtitle {
