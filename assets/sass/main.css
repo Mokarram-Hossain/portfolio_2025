@@ -3622,7 +3622,7 @@ ul.plan-list.style-2 li {
   }
 }
 ul.plan-list.style-2 li svg {
-  fill: var(--color-white) !important;
+  fill: var(--color-primary) !important;
   width: 28px;
   height: 20px;
   margin-top: 6px;
@@ -3956,6 +3956,12 @@ ul.plan-list li span {
   font-size: 22px;
   margin-bottom: 30px;
   text-transform: capitalize;
+}
+.portfolio-card .portfolio-img img {
+  width: 100% !important;
+  height: 100% !important;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .tags-container {
