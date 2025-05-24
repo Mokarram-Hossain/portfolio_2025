@@ -3934,7 +3934,7 @@ ul.plan-list li span {
   padding: 10px 25px;
   border-radius: 30px;
   background-color: #eee;
-  margin: 0 10px;
+  margin: 0px 10px !important;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
