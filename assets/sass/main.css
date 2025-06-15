@@ -2057,7 +2057,7 @@ header .main-nav ul li.menu-item-has-children > i {
 }
 
 .footer {
-  background-color: var(--text-primary);
+  background-color: #000;
 }
 
 .contact-info {
@@ -3949,6 +3949,9 @@ ul.plan-list li span {
   overflow: hidden;
   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.089);
 }
+.portfolio-card:hover .portfolio-img img {
+  transform: scale(1.2);
+}
 .portfolio-card .portfolio-content {
   padding: 25px;
 }
@@ -3957,11 +3960,15 @@ ul.plan-list li span {
   margin-bottom: 30px;
   text-transform: capitalize;
 }
+.portfolio-card .portfolio-img {
+  overflow: hidden;
+}
 .portfolio-card .portfolio-img img {
   width: 100% !important;
   height: 100% !important;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: 0.5s ease-in-out;
 }
 
 .tags-container {
@@ -4007,33 +4014,72 @@ ul.plan-list li span {
   background: #FFE9BA;
 }
 
-.expertise-item {
-  padding: 30px 30px;
-  text-align: center;
-  background-color: var(--color-dark-two);
-  border-radius: 150px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: 0.5s ease;
+.skill-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
 }
-.expertise-item:hover {
-  border: 1px solid var(--color-primary);
-}
-.expertise-item .icon {
-  width: 60px;
-  margin: 0 auto 30px;
-}
-.expertise-item .text {
-  text-align: center;
-}
-.expertise-item .text h4 {
-  font-size: 40px;
+.skill-wrapper .skill-name {
+  font-size: 20px;
+  font-weight: 500;
   color: var(--color-white);
-  margin-bottom: 2px;
+  margin: 12px 0 0;
 }
-.expertise-item .text p {
-  margin-bottom: 0;
+.skill-wrapper .percent-label {
   color: var(--color-white);
-  font-size: 18px;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.skill-wrapper .expertise-item {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.skill-wrapper .expertise-item .circle-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 160px;
+  height: 160px;
+  transform: rotate(-90deg);
+}
+.skill-wrapper .expertise-item .circle-svg circle {
+  fill: none;
+  stroke-width: 6;
+  cx: 80;
+  cy: 80;
+  r: 75;
+}
+.skill-wrapper .expertise-item .circle-svg .bg {
+  stroke: rgba(255, 255, 255, 0.1);
+}
+.skill-wrapper .expertise-item .circle-svg .progress {
+  stroke: var(--color-primary);
+  stroke-dasharray: 471.24;
+  stroke-dashoffset: 47.124;
+  transition: stroke-dashoffset 0.6s ease;
+}
+.skill-wrapper .expertise-item .content {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skill-wrapper .expertise-item .content .icon {
+  width: 65px;
+  height: 65px;
+  margin-bottom: 5px;
+}
+.skill-wrapper .expertise-item .content .icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .timeline-entries {
