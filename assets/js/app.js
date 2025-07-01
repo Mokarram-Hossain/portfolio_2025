@@ -48,6 +48,10 @@ $(".main-nav .bi").on('click', function (event) {
     $fl.next(".sub-menu").slideToggle();
 });
 
+$('.main-nav a').on("click", function () {
+  $('.main-nav').removeClass('show-menu');
+});
+
   // Review slider
   const reviewSlider = document.querySelector(".testimonial-slider");
   if (reviewSlider) {
