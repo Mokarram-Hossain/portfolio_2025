@@ -2637,6 +2637,19 @@ header .main-nav ul li.menu-item-has-children > i {
   transform-origin: 0% 0%;
 }
 
+.magenetic-cursor {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
 .about-card {
   display: flex;
   justify-content: flex-start;

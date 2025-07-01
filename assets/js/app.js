@@ -395,60 +395,56 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
-// Circle button hover
+const cursor = document.querySelector(".magenetic-cursor");
+const cards = document.querySelectorAll(".magnetic-area");
 
-const buttons = document.querySelectorAll('.circle-button');
+// Track mouse
+document.addEventListener("mousemove", (e) => {
+  gsap.to(cursor, {
+    x: e.clientX,
+    y: e.clientY,
+    duration: 0.2,
+    ease: "power2.out"
+  });
+});
 
-if (buttons) {
-  buttons.forEach(button => {
-    const overlay = button.querySelector('.fill-overlay');
-    const content = button.querySelector('.content');
-    const heading = button.querySelector('h3');
-    const isDark = button.classList.contains('dark');
+// Magnetic effect
+cards.forEach((card) => {
+  card.addEventListener("mousemove", (e) => {
+    const rect = card.getBoundingClientRect();
+    const relX = e.clientX - rect.left - rect.width / 2;
+    const relY = e.clientY - rect.top - rect.height / 2;
 
-    button.addEventListener('mouseenter', (e) => {
-      const rect = button.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const xPercent = Math.round((x / rect.width) * 100);
-      const yPercent = Math.round((y / rect.height) * 100);
-
-      gsap.set(overlay, {
-        transformOrigin: `${xPercent}% ${yPercent}%`
-      });
-
-      gsap.to(overlay, {
-        scale: 2.5,
-        duration: 0.62,
-        ease: "none"
-      });
-
-      if (isDark) {
-        gsap.to(heading, {
-          color: '#222',
-          duration: 0.5,
-          ease: "none"
-        });
-      }
+    gsap.to(card, {
+      x: relX * 0.2,
+      y: relY * 0.2,
+      duration: 0.3,
+      ease: "power2.out"
     });
 
-    button.addEventListener('mouseleave', () => {
-      gsap.to(overlay, {
-        scale: 0,
-        duration: 0.5,
-        ease: "none"
-      });
-
-      if (isDark) {
-        gsap.to(heading, {
-          color: '#fff',
-          duration: 0.5,
-          ease: "none"
-        });
-      }
+    gsap.to(cursor, {
+      scale: 2,
+      backgroundColor: "white",
+      duration: 0.3,
     });
   });
-}
+
+  card.addEventListener("mouseleave", () => {
+    gsap.to(card, {
+      x: 0,
+      y: 0,
+      duration: 0.5,
+      ease: "power3.out"
+    });
+
+    gsap.to(cursor, {
+      scale: 1,
+      backgroundColor: "transparent",
+      duration: 0.3,
+    });
+  });
+});
+
 
 
 })();
