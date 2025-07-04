@@ -204,6 +204,18 @@
   }
 }
 
+.btn-outline-white{
+  border: 1px solid #dadce0;
+  color: $color-white !important;
+
+  &:hover{
+    background-color: $color-primary;
+    border: 2px solid $color-primary;
+    color: $text-primary !important;
+
+  }
+}
+
 
 .arrow-btn{
   display: flex;
