@@ -3956,6 +3956,19 @@ ul.plan-list li span {
   background-color: #eee;
   margin: 0px 10px !important;
 }
+@media (max-width: 767.98px) {
+  .nav-pills .nav-link {
+    min-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .nav-pills .nav-item {
+    min-width: 100%;
+    width: 100%;
+  }
+}
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   color: var(--text-primary);

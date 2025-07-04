@@ -162,7 +162,17 @@
     border-radius: 30px;
     background-color: #eee;
     margin: 0px 10px !important;
+      @include md-down{
+     min-width: 100%;
+     width: 100%;
+    }
+}
 
+.nav-pills .nav-item{
+     @include md-down{
+     min-width: 100%;
+     width: 100%;
+    }
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
