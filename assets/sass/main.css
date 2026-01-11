@@ -3985,7 +3985,7 @@ ul.plan-list li span {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  min-height: 380px;
+  min-height: 240px;
 }
 .portfolio-card .portfolio-img {
   width: 100%;
@@ -4019,7 +4019,7 @@ ul.plan-list li span {
 }
 .portfolio-card .portfolio-content a {
   color: #fff;
-  border-color: #fff;
+  border-color: #ffffff7c;
 }
 .portfolio-card .portfolio-content a:hover {
   background: #fff;
