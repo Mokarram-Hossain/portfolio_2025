@@ -937,6 +937,10 @@ button {
   border-radius: 30px;
   line-height: 1;
 }
+.m-btn.btn--primary span i {
+  font-size: 24px;
+  font-weight: bolder;
+}
 .m-btn.btn--primary span:last-child {
   min-width: 40px;
   height: 40px;
@@ -2112,9 +2116,9 @@ header .main-nav ul li.menu-item-has-children > i {
 
 .banner-title {
   font-size: 60px;
-  margin-block-end: 50px;
   font-weight: 500;
   line-height: 1.12;
+  margin-block-end: 20px;
   color: var(--color-white);
 }
 @media (max-width: 1199.98px) {
@@ -2129,6 +2133,14 @@ header .main-nav ul li.menu-item-has-children > i {
 }
 .banner-title span {
   font-family: var(--font-secondary);
+}
+
+.banner-details {
+  color: white !important;
+  margin-block-end: 50px;
+  opacity: 80%;
+  font-size: 20px;
+  font-weight: 300;
 }
 
 .banner {
@@ -2676,7 +2688,7 @@ header .main-nav ul li.menu-item-has-children > i {
   margin-bottom: 70px;
 }
 .about-card .content ul li {
-  font-size: 22px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 .about-card .content ul li:last-child {
@@ -3987,6 +3999,7 @@ ul.plan-list li span {
   flex-direction: column;
   justify-content: flex-end;
   height: 200px;
+  border-radius: 12px;
 }
 .portfolio-card .portfolio-img {
   width: 100%;

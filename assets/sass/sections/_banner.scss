@@ -2,9 +2,9 @@
 
 .banner-title {
   font-size: 60px;
-  margin-block-end: 50px;
   font-weight: 500;
   line-height: 1.12;
+  margin-block-end: 20px;
   color: $color-white;
   @include xl-down {
     font-size: 44px;
@@ -16,6 +16,15 @@
   span{
     font-family: $font-secondary;
   }
+}
+
+.banner-details{
+  color: white !important;
+  margin-block-end: 50px;
+  opacity: 80%;
+  font-size: 20px;
+  font-weight: 300;
+
 }
 
 .banner {
@@ -60,6 +69,8 @@
     flex-direction: column;
     justify-content: center;
     z-index: 1;
+
+
 
     @include xl(){
     padding: 35px;
@@ -244,6 +255,7 @@
         }
       }
     }
+
   }
 }
 
