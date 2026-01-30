@@ -89,8 +89,8 @@
             line-height: 1.5;
             margin-bottom: 24px;
             font-size: 20px;
-
-              @include lg-down{
+ 
+             @include lg-down{
                         font-size: 16px;
                 }
 
@@ -117,7 +117,7 @@
         align-items: flex-start;
 
         @include md-down{
-           font-size: 18px;
+           font-size: 14px !important;
         }
 
         span{
